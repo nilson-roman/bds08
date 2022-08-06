@@ -7,17 +7,6 @@
   padding-left: 40px;
 }
 
-.filter-input {
-  height: 50px;
-  width: 270px;
-  background-color: var(--primary-color);
-  color: var(--grey-light-50-color);
-  font-size: 16px;
-  border: 1px solid var(--grey-light-50-color);
-  border-radius: 4px;
-  padding: 12px 5px;
-}
-
 .filter-input:first-of-type {
   margin-right: 55px;
 }
@@ -25,4 +14,37 @@
 .filter-input::placeholder {
   font-size: 18px;
   color: var(--grey-light-50-color);
+}
+
+
+.filter-input-select__control {
+  height: 50px;
+  width: 270px;
+  background-color: var(--primary-color);
+  color: var(--grey-light-50-color) !important;
+  font-size: 16px;
+  border: 1px solid var(--grey-light-50-color);
+  border-radius: 4px !important;
+  padding: 12px 5px;
+}
+
+.filter-input-select__placeholder {
+  color: #9E9E9E !important;
+}
+
+.filter-input-select__indicator-separator {
+  display: none;
+}
+
+/* specific react-select class for options*/
+.css-b62m3t-container {
+  color: #8D8D8D !important;
+}
+
+.css-6j8wv5-Input {
+  color: #8D8D8D !important;
+}
+
+.css-qc6sy-singleValue {
+  color: #8D8D8D !important;
 }
