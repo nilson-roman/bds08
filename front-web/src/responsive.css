@@ -1,0 +1,27 @@
+@media screen and (max-width: 1200px) {
+  /* abaixo de 1200 vai aplicar isso */
+}
+
+@media screen and (max-width: 992px) {
+  /* abaixo de 992 vai aplicar isso */
+
+}
+
+@media screen and (max-width: 768px) {
+  /* abaixo de 768 vai aplicar isso */
+
+}
+
+@media screen and (max-width: 576px) {
+  /* abaixo de 576 vai aplicar isso */
+  #root .app-container {
+    padding: 0 10px;
+  }
+
+  #root .filter-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 130px;
+    padding-left: 15px;
+  }
+}

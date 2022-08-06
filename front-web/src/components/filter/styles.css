@@ -1,0 +1,28 @@
+.filter-container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.filter-input {
+  height: 50px;
+  width: 270px;
+  background-color: var(--primary-color);
+  color: var(--grey-light-50-color);
+  font-size: 16px;
+  border: 1px solid var(--grey-light-50-color);
+  border-radius: 4px;
+  padding: 12px 5px;
+}
+
+.filter-input:first-of-type {
+  margin-right: 55px;
+}
+
+.filter-input::placeholder {
+  font-size: 18px;
+  color: var(--grey-light-50-color);
+}

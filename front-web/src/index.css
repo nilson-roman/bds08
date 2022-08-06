@@ -6,6 +6,7 @@
   --primary-color: #FFFFFF;
   --secondary-color: #E5E5E5;
   --light-color: #334AC3;
+  --grey-light-50-color: #8D8D8D;
 }
 
 body {
@@ -17,4 +18,9 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
+}
+
+.base-card {
+  background: var(--primary-color);
+  border-radius: 5px;
 }
