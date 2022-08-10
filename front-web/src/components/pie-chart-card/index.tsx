@@ -10,12 +10,12 @@ type Props = {
 
 function DonutChartCard({ labels = [], name, series = [] }: Props) {
   return (
-    <div className="pie-chart-card base-card">
+    <div className="pie-chart-card">
       <ReactApexChart
         options={buildDonutChartConfig(labels, name)}
         type="donut"
-        width="400"
-        height="400"
+        width="350px"
+        height="350px"
         series={series}
       />
     </div>
