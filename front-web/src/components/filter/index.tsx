@@ -1,12 +1,23 @@
 import './styles.css';
 
-import { Store } from '../../types';
-import Select from 'react-select';
+import { FilterData, Store } from '../../types';
+import Select, { SingleValue } from 'react-select';
 
 type Props = {
   stores?: Store[];
+  onFilterChange: (filter: FilterData) => void;
 };
-function Filter({ stores }: Props) {
+function Filter({ stores, onFilterChange }: Props) {
+  const onChangeStore = (store: SingleValue<Store>) => {
+    if (store) {
+      const selectedStore = store as Store;
+      onFilterChange({ store: selectedStore });
+      return;
+    }
+    const defaultStore = { id: 0, name: '' } as Store;
+    onFilterChange({ store: defaultStore });
+  };
+
   return (
     <div className="filter-container base-card">
       <Select
@@ -17,6 +28,7 @@ function Filter({ stores }: Props) {
         inputId="store"
         placeholder="Selecione uma loja"
         isClearable
+        onChange={(e) => onChangeStore(e)}
       />
     </div>
   );

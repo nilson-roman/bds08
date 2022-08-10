@@ -1,5 +1,5 @@
 export type FilterData = {
-  storeId?: number;
+  store?: Store;
 };
 
 export type Store = {
