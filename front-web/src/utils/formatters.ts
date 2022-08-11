@@ -5,3 +5,10 @@ export const formatPrice = (price: number) => {
     currency: 'BRL'
   }).format(price);
 };
+
+export const formatName = (name: string) => {
+  if (name == 'FEMALE') return 'Feminino';
+  if (name == 'MALE') return 'Masculino';
+  if (name == 'OTHER') return 'Outro';
+  return name;
+};

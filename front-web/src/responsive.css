@@ -1,15 +1,17 @@
-@media screen and (max-width: 1200px) {
-  /* abaixo de 1200 vai aplicar isso */
-}
-
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 992px) {
   /* abaixo de 992 vai aplicar isso */
+  .app-sales-container {
+    display: flex;
+    align-items: center;
+    height: 420px;
+    justify-content: space-between;
+  }
 
-}
-
-@media screen and (max-width: 768px) {
-  /* abaixo de 768 vai aplicar isso */
-
+  .pie-chart-card {
+    display: flex;
+    justify-content: center;
+    padding-right: 70px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -23,5 +25,12 @@
     margin-bottom: 10px;
     height: 130px;
     padding-left: 15px;
+  }
+
+  #root .summary-container {
+    padding-left: 15px;
+  }
+  #root .filter-input-select__control {
+    width: 240px;
   }
 }

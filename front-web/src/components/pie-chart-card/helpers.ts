@@ -10,9 +10,9 @@ export const buildDonutChartConfig = (labels: string[] = [], name?: string) => {
       offsetX: 0,
       offsetY: 0,
       style: {
-        color: '#FFF',
-        fontSize: '18px',
-        fontFamily: 'Roboto, sans-serif'
+        color: '#FFFFFF',
+        fontSize: '16px',
+        fontFamily: 'Ubuntu, sans-serif'
       }
     },
     legend: {
@@ -23,20 +23,23 @@ export const buildDonutChartConfig = (labels: string[] = [], name?: string) => {
       labels: {
         colors: ['#b4bed2']
       },
-      fontFamily: 'Roboto, sans-serif',
-      fontSize: '18px',
+      fontFamily: 'Ubuntu, sans-serif',
+      fontSize: '16px',
       itemMargin: {
         vertical: 5
       }
     },
     dataLabels: {
-      enabled: false
+      enabled: true,
+      formatter: function (val) {
+        return Number(val).toFixed(2) + '%';
+      }
     },
     plotOptions: {
       pie: {
-        size: 400,
+        size: 350,
         donut: {
-          size: '85%',
+          size: '75%',
           labels: {
             show: true,
             name: {
@@ -49,9 +52,9 @@ export const buildDonutChartConfig = (labels: string[] = [], name?: string) => {
             total: {
               show: true,
               showAlways: true,
-              fontSize: '24px',
+              fontSize: '16px',
               color: '#ABB1C0',
-              fontFamily: 'Roboto, sans-serif',
+              fontFamily: 'Ubuntu, sans-serif',
               formatter: function () {
                 return '';
               }
@@ -60,8 +63,9 @@ export const buildDonutChartConfig = (labels: string[] = [], name?: string) => {
         }
       }
     },
+    colors: ['#FF7A00', '#7234F5', '#FF0000'],
     chart: {
-      height: '400px'
+      height: '200px'
     }
   } as ApexOptions;
 };
